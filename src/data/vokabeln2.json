@@ -1,7 +1,23 @@
 [
-    { "wort": "die Pflege", "bedeutung": "bakım" },
-    { "wort": "der Schmerz", "bedeutung": "ağrı" },
-    { "wort": "das Bett", "bedeutung": "yatak" },
-    { "wort": "die Tablette", "bedeutung": "hap" }
+    { "wort": "die Dekubitusprophylaxe", "bedeutung": "yatak yarası önleme" },
+    { "wort": "die Flüssigkeitsbilanz", "bedeutung": "sıvı dengesi kaydı" },
+    { "wort": "die Schmerzlinderung", "bedeutung": "ağrı hafifletme" },
+    { "wort": "die Atemfrequenz", "bedeutung": "solunum sayısı" },
+    { "wort": "die Dokumentationspflicht", "bedeutung": "belgeleme yükümlülüğü" },
+    { "wort": "die Infektionsgefahr", "bedeutung": "enfeksiyon riski" },
+    { "wort": "die Eigenständigkeit", "bedeutung": "bağımsızlık (hasta için)" },
+    { "wort": "die Mobilisation", "bedeutung": "hareket ettirme (hasta)" },
+    { "wort": "die Patientenverfügung", "bedeutung": "hasta vasiyeti (irade belgesi)" },
+    { "wort": "der Pflegebericht", "bedeutung": "bakım raporu" },
+    { "wort": "die Vitalzeichenkontrolle", "bedeutung": "hayati belirtilerin kontrolü" },
+    { "wort": "die Hygienemaßnahme", "bedeutung": "hijyen önlemi" },
+    { "wort": "die Katheterisierung", "bedeutung": "kateter yerleştirme" },
+    { "wort": "die Medikamentenvergabe", "bedeutung": "ilaç verme süreci" },
+    { "wort": "die Nahrungsaufnahme", "bedeutung": "besin alımı" },
+    { "wort": "die Beobachtungsgabe", "bedeutung": "gözlem yeteneği" },
+    { "wort": "die Pflegebedürftigkeit", "bedeutung": "bakıma muhtaçlık durumu" },
+    { "wort": "die Schmerzskala", "bedeutung": "ağrı skalası (1-10)" },
+    { "wort": "die Inkontinenz", "bedeutung": "idrar/büyük abdest kontrol kaybı" },
+    { "wort": "die Thromboseprophylaxe", "bedeutung": "pıhtı önleme (bacaklarda)" }
   ]
   

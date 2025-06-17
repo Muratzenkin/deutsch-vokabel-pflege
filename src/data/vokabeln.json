@@ -1,62 +1,63 @@
 [
-  {
-    "wort": "die Notaufnahme",
-    "bedeutung": "acil servis",
-    "beispiel": "Ich arbeite in der Notaufnahme."
-  },
-  {
-    "wort": "der Rollstuhl",
-    "bedeutung": "tekerlekli sandalye",
-    "beispiel": "Der Patient sitzt im Rollstuhl."
-  },
-  {
-    "wort": "der Oberarm",
-    "bedeutung": "üst kol",
-    "beispiel": "Er hat Schmerzen im Oberarm."
-  },
-  {
-    "wort": "die Schulter",
-    "bedeutung": "omuz",
-    "beispiel": "Die Schulter ist gerötet und geschwollen."
-  },
-  {
-    "wort": "das Kreuzbein",
-    "bedeutung": "kuyruk sokumu",
-    "beispiel": "Der Dekubitus liegt am Kreuzbein."
-  },
-  {
-    "wort": "die Atemnot",
-    "bedeutung": "nefes darlığı",
-    "beispiel": "Der Patient hat plötzlich Atemnot bekommen."
-  },
-  {
-    "wort": "der Verband",
-    "bedeutung": "sargı, pansuman",
-    "beispiel": "Der Verband muss täglich gewechselt werden."
-  },
-  {
-    "wort": "die Blutdruckmessung",
-    "bedeutung": "tansiyon ölçümü",
-    "beispiel": "Ich mache jetzt die Blutdruckmessung."
-  },
-  {
-    "wort": "die Appetitlosigkeit",
-    "bedeutung": "iştahsızlık",
-    "beispiel": "Die Patientin leidet unter Appetitlosigkeit."
-  },
-  {
-    "wort": "die Drainage",
-    "bedeutung": "drenaj",
-    "beispiel": "Die Drainage wird morgen gezogen."
-  },
-  {
-    "wort": "die Anweisung",
-    "bedeutung": "talimat",
-    "beispiel": "Bitte führen Sie die ärztliche Anweisung aus."
-  },
-  {
-    "wort": "die Körperpflege",
-    "bedeutung": "kişisel temizlik",
-    "beispiel": "Ich helfe dem Patienten bei der Körperpflege."
-  }
-]
+    {
+      "wort": "die Notfallversorgung",
+      "bedeutung": "acil bakım hizmeti",
+      "beispiel": "Die Notfallversorgung erfordert schnelles und koordiniertes Handeln."
+    },
+    {
+      "wort": "das Mobilitätshilfsmittel",
+      "bedeutung": "hareket desteği aracı (örn. tekerlekli sandalye)",
+      "beispiel": "Der Rollstuhl zählt zu den wichtigsten Mobilitätshilfsmitteln im Pflegealltag."
+    },
+    {
+      "wort": "der proximale Humerus",
+      "bedeutung": "üst kolun üst kısmı (tıbbi adı)",
+      "beispiel": "Die Fraktur befindet sich im Bereich des proximalen Humerus."
+    },
+    {
+      "wort": "das Schultergelenk",
+      "bedeutung": "omuz eklemi",
+      "beispiel": "Entzündungen im Schultergelenk schränken die Beweglichkeit stark ein."
+    },
+    {
+      "wort": "das Os sacrum",
+      "bedeutung": "kuyruk sokumu (Latince adı)",
+      "beispiel": "Der Dekubitus Grad II befindet sich am Os sacrum."
+    },
+    {
+      "wort": "die Dyspnoe",
+      "bedeutung": "nefes darlığı (tıbbi terim)",
+      "beispiel": "Die Patientin zeigte akute Dyspnoe bei Belastung."
+    },
+    {
+      "wort": "die Wundversorgung",
+      "bedeutung": "yara bakımı",
+      "beispiel": "Die Wundversorgung muss unter sterilen Bedingungen erfolgen."
+    },
+    {
+      "wort": "die arterielle Blutdruckmessung",
+      "bedeutung": "kan basıncının arteriyel yolla ölçülmesi",
+      "beispiel": "Die arterielle Blutdruckmessung erfolgt im Sitzen und nach Ruhephase."
+    },
+    {
+      "wort": "die Anorexie",
+      "bedeutung": "aşırı iştah kaybı (tıbbi terim)",
+      "beispiel": "Die Patientin leidet unter Anorexie infolge der Chemotherapie."
+    },
+    {
+      "wort": "das Drainagesystem",
+      "bedeutung": "vücut sıvısını dışarı taşıyan sistem",
+      "beispiel": "Das Drainagesystem wird postoperativ zur Ableitung von Wundsekret eingesetzt."
+    },
+    {
+      "wort": "die ärztliche Verordnung",
+      "bedeutung": "doktorun yazılı talimatı",
+      "beispiel": "Bitte dokumentieren Sie die Umsetzung der ärztlichen Verordnung im Pflegebericht."
+    },
+    {
+      "wort": "die Ganzkörperpflege",
+      "bedeutung": "tam vücut temizliği",
+      "beispiel": "Die Ganzkörperpflege sollte unter Berücksichtigung der Ressourcen des Patienten erfolgen."
+    }
+  ]
+  

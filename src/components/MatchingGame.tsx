@@ -16,20 +16,46 @@ export default function MatchingGame() {
   const [cards, setCards] = useState<Card[]>([]);
   const [flipped, setFlipped] = useState<string[]>([]);
   const [lockBoard, setLockBoard] = useState(false);
+  const [seconds, setSeconds] = useState(0);
+  const [isRunning, setIsRunning] = useState(true);
 
+  // Kartları yükle ve karıştır
   useEffect(() => {
     const shuffled = shuffleCards(data as Vokabel[]);
     setCards(shuffled);
   }, []);
 
-  const shuffleCards = (vokabeln: Vokabel[]): Card[] => {
-    const cardList: Card[] = [];
+  // Süre sayacı
+  useEffect(() => {
+    let timer: number;
 
-    vokabeln.forEach((item, index) => {
+    if (isRunning) {
+      timer = setInterval(() => {
+        setSeconds((s) => s + 1);
+      }, 1000);
+    }
+
+    return () => clearInterval(timer);
+  }, [isRunning]);
+
+  // Oyun tamamlandığında süreyi durdur
+  useEffect(() => {
+    if (cards.length > 0 && cards.every((card) => card.matched)) {
+      setIsRunning(false);
+    }
+  }, [cards]);
+
+  // Kartları karıştır
+  const shuffleCards = (vokabeln: Vokabel[]): Card[] => {
+    const shuffledVokabeln = [...vokabeln].sort(() => Math.random() - 0.5).slice(0, 6); // sadece 6 kelime çifti
+  
+    const cardList: Card[] = [];
+  
+    shuffledVokabeln.forEach((item, index) => {
       cardList.push({ id: `${index}-wort`, text: item.wort, matched: false });
       cardList.push({ id: `${index}-bedeutung`, text: item.bedeutung, matched: false });
     });
-
+  
     return cardList.sort(() => Math.random() - 0.5);
   };
 
@@ -68,11 +94,13 @@ export default function MatchingGame() {
 
   return (
     <div className="max-w-3xl mx-auto p-8">
-      <h2 className="text-2xl font-bold text-center mb-6 text-blue-800">🎴 Matching Game</h2>
+      <h2 className="text-2xl font-bold text-center mb-4 text-blue-800">🎴 Matching Game</h2>
+
+      <p className="text-center text-sm text-gray-600 mb-4">⏱ Süre: {seconds} saniye</p>
 
       {allMatched ? (
         <div className="text-center text-green-700 text-xl font-semibold">
-          🎉 Tebrikler! Tüm kartları eşleştirdiniz!
+          🎉 Tebrikler! Tüm kartları {seconds} saniyede eşleştirdiniz!
         </div>
       ) : (
         <div className="grid grid-cols-4 gap-4">
