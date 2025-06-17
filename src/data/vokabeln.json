@@ -1,0 +1,62 @@
+[
+  {
+    "wort": "die Notaufnahme",
+    "bedeutung": "acil servis",
+    "beispiel": "Ich arbeite in der Notaufnahme."
+  },
+  {
+    "wort": "der Rollstuhl",
+    "bedeutung": "tekerlekli sandalye",
+    "beispiel": "Der Patient sitzt im Rollstuhl."
+  },
+  {
+    "wort": "der Oberarm",
+    "bedeutung": "üst kol",
+    "beispiel": "Er hat Schmerzen im Oberarm."
+  },
+  {
+    "wort": "die Schulter",
+    "bedeutung": "omuz",
+    "beispiel": "Die Schulter ist gerötet und geschwollen."
+  },
+  {
+    "wort": "das Kreuzbein",
+    "bedeutung": "kuyruk sokumu",
+    "beispiel": "Der Dekubitus liegt am Kreuzbein."
+  },
+  {
+    "wort": "die Atemnot",
+    "bedeutung": "nefes darlığı",
+    "beispiel": "Der Patient hat plötzlich Atemnot bekommen."
+  },
+  {
+    "wort": "der Verband",
+    "bedeutung": "sargı, pansuman",
+    "beispiel": "Der Verband muss täglich gewechselt werden."
+  },
+  {
+    "wort": "die Blutdruckmessung",
+    "bedeutung": "tansiyon ölçümü",
+    "beispiel": "Ich mache jetzt die Blutdruckmessung."
+  },
+  {
+    "wort": "die Appetitlosigkeit",
+    "bedeutung": "iştahsızlık",
+    "beispiel": "Die Patientin leidet unter Appetitlosigkeit."
+  },
+  {
+    "wort": "die Drainage",
+    "bedeutung": "drenaj",
+    "beispiel": "Die Drainage wird morgen gezogen."
+  },
+  {
+    "wort": "die Anweisung",
+    "bedeutung": "talimat",
+    "beispiel": "Bitte führen Sie die ärztliche Anweisung aus."
+  },
+  {
+    "wort": "die Körperpflege",
+    "bedeutung": "kişisel temizlik",
+    "beispiel": "Ich helfe dem Patienten bei der Körperpflege."
+  }
+]
