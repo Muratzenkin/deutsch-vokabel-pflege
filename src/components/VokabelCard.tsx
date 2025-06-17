@@ -1,11 +1,5 @@
-import React, { useState } from "react";
 import vokabelnData from "../data/vokabeln.json";
-
-type Vokabel = {
-  wort: string;
-  bedeutung: string;
-  beispiel: string;
-};
+import { useState } from "react";
 
 export default function VokabelCard() {
   const [index, setIndex] = useState(0);

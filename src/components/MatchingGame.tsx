@@ -1,5 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import data from "../data/vokabeln2.json";
+
+type Vokabel = {
+  wort: string;
+  bedeutung: string;
+};
 
 type Card = {
   id: string;
@@ -13,13 +18,12 @@ export default function MatchingGame() {
   const [lockBoard, setLockBoard] = useState(false);
 
   useEffect(() => {
-    // Vokabel verisini kartlara dönüştür
-    const shuffled = shuffleCards(data);
+    const shuffled = shuffleCards(data as Vokabel[]);
     setCards(shuffled);
   }, []);
 
-  const shuffleCards = (vokabeln: any[]) => {
-    let cardList: Card[] = [];
+  const shuffleCards = (vokabeln: Vokabel[]): Card[] => {
+    const cardList: Card[] = [];
 
     vokabeln.forEach((item, index) => {
       cardList.push({ id: `${index}-wort`, text: item.wort, matched: false });
@@ -60,21 +64,33 @@ export default function MatchingGame() {
     setLockBoard(false);
   };
 
+  const allMatched = cards.length > 0 && cards.every((card) => card.matched);
+
   return (
-    <div className="grid grid-cols-4 gap-4 p-8 max-w-3xl mx-auto">
-      {cards.map((card) => (
-        <div
-          key={card.id}
-          onClick={() => handleClick(card)}
-          className={`cursor-pointer h-20 flex items-center justify-center border text-lg font-semibold rounded shadow ${
-            flipped.includes(card.id) || card.matched
-              ? "bg-green-100"
-              : "bg-blue-200"
-          }`}
-        >
-          {flipped.includes(card.id) || card.matched ? card.text : "❓"}
+    <div className="max-w-3xl mx-auto p-8">
+      <h2 className="text-2xl font-bold text-center mb-6 text-blue-800">🎴 Matching Game</h2>
+
+      {allMatched ? (
+        <div className="text-center text-green-700 text-xl font-semibold">
+          🎉 Tebrikler! Tüm kartları eşleştirdiniz!
         </div>
-      ))}
+      ) : (
+        <div className="grid grid-cols-4 gap-4">
+          {cards.map((card) => (
+            <div
+              key={card.id}
+              onClick={() => handleClick(card)}
+              className={`cursor-pointer h-20 flex items-center justify-center border text-lg font-semibold rounded shadow transition duration-200 ${
+                flipped.includes(card.id) || card.matched
+                  ? "bg-green-100"
+                  : "bg-blue-200 hover:bg-blue-300"
+              }`}
+            >
+              {flipped.includes(card.id) || card.matched ? card.text : "❓"}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

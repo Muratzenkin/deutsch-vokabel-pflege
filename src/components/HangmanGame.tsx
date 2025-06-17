@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import vokabeln from "../data/vokabeln.json";
 import img0 from "../assets/hangman/0.jpg";
 import img1 from "../assets/hangman/1.jpg";
