@@ -21,7 +21,7 @@
     },
     {
       "abkürzung": "AF",
-      "bedeutung": "Atemfrequenz",
+      "bedeutung": "Atemfrequenz, die",
       "erklaerung": "Solunum hızı (nefes sayısı)."
     },
     {
@@ -40,10 +40,46 @@
       "erklaerung": "Genel sağlık durumu."
     },
     {
-      "abkürzung": "B",
+      "abkürzung": "AMY",
+      "bedeutung": "Pankreas-Amylase, die",
+      "erklaerung": ""
+    },
+    {
+      "abkürzung": "angeb.",
+      "bedeutung": "angeboren",
+      "erklaerung": ""
+    },
+    {
+      "abkürzung": "AP",
+      "bedeutung": "Anamnese und Pflege",
+      "erklaerung": "Hastanın geçmişi ve bakımı."
+    },
+    {
+      "abkürzung": "AS",
+      "bedeutung": "Arteria subclavia",
+      "erklaerung": "Köprücük kemiği altındaki atardamar."
+    },
+    {
+      "abkürzung": "AT",
+      "bedeutung": "Arzt, Ärztin",
+      "erklaerung": "Doktor (hekim)."
+    },
+    {
+      "abkürzung": "BGA",
+      "bedeutung": "Blutgasanalyse, die",
+      "erklaerung": "Kan gazı analizi."
+    },
+    {
+      "abkürzung": "b.B",
       "bedeutung": "bei Bedarf",
       "erklaerung": "Gerektiğinde."
     },
+    {
+      "abkürzung": "Bef.",
+      "bedeutung": "Befund, der",
+      "erklaerung": "Muayene bulgusu."
+    },
+
     {
       "abkürzung": "BMI",
       "bedeutung": "Body-Mass-Index",
@@ -93,6 +129,98 @@
       "abkürzung": "DM",
       "bedeutung": "Diabetes mellitus",
       "erklaerung": "Şeker hastalığı."
+    },
+    {
+      "abkürzung": "DV",
+      "bedeutung": "Druckverband, der",
+      "erklaerung": "Basınçlı sargı"
+    },
+    {
+      "abkürzung": "EKG",
+      "bedeutung": "Elektrokardiogramm, das",
+      "erklaerung": "Elektrokardiyogram"
+    },
+    {
+      "abkürzung": "Echo",
+      "bedeutung": "Echokardiographie",
+      "erklaerung": "Kalp ultrasonu"
+    },
+    {
+      "abkürzung": "ET",
+      "bedeutung": "Endotrachealtubus",
+      "erklaerung": "Soluk borusu tüpü"
+    },
+    {
+      "abkürzung": "EZ",
+      "bedeutung": "Ernährungszustand",
+      "erklaerung": "Beslenme durumu"
+    },
+    {
+      "abkürzung": "Fe",
+      "bedeutung": "Ferritin",
+      "erklaerung": "Demir depolayan protein"
+    },
+    {
+      "abkürzung": "geb.",
+      "bedeutung": "geboren",
+      "erklaerung": "Doğum tarihi"
+    },
+    {
+      "abkürzung": "GKV",
+      "bedeutung": "Gesetzliche Krankenversicherung",
+      "erklaerung": "Yasal sağlık sigortası"
+    },
+    {
+      "abkürzung": "HA",
+      "bedeutung": "Hausarzt, Hausärztin",
+      "erklaerung": "Aile hekimi"
+    },
+    {
+      "abkürzung": "Hb",
+      "bedeutung": "Hämoglobin",
+      "erklaerung": "Kanda oksijen taşıyan protein"
+    },
+    {
+      "abkürzung": "HF",
+      "bedeutung": "Herzfrequenz, die",
+      "erklaerung": "Kalp atış hızı"
+    },
+    {
+      "abkürzung": "HK",
+      "bedeutung": "Hämatokrit",
+      "erklaerung": "Kanın hücresel oranı"
+    },
+    {      "abkürzung": "HNO",
+      "bedeutung": "Hals-Nasen-Ohren-Heilkunde",
+      "erklaerung": "Kulak burun boğaz hastalıkları"
+    },
+    {      "abkürzung": "i.v.",
+      "bedeutung": "intravenös",
+      "erklaerung": "Damardan (intravenöz) uygulama"
+    },
+    {      "abkürzung": "i.m.",
+      "bedeutung": "intramuskulär",
+      "erklaerung": "Kas içi (intramusküler) uygulama"
+    },
+    {      "abkürzung": "i.d.",
+      "bedeutung": "intradermal",
+      "erklaerung": "Deri altı (intradermal injeksyon) uygulama"
+    },
+    {      "abkürzung": "i.p.",         
+      "bedeutung": "intraperitoneal",
+      "erklaerung": "Karın içi (intraperitoneal) uygulama"
+    },
+    {      "abkürzung": "i.a.",
+      "bedeutung": "intraarteriell",
+      "erklaerung": "Arter içine (intraarteriyel) uygulama"
+    },
+    {      "abkürzung": "i.c.",
+      "bedeutung": "intrakutan",
+      "erklaerung": "Cilt altı (intrakutan) uygulama"
+    },
+    {      "abkürzung": "IV",
+      "bedeutung": "Infusion, die",
+      "erklaerung": "Damardan sıvı verme işlemi"
     }
   ]
   
