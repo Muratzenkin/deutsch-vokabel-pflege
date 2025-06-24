@@ -8,6 +8,8 @@ import img3 from "../assets/hangman/3.jpg";
 import img4 from "../assets/hangman/4.jpg";
 import img5 from "../assets/hangman/5.jpg";
 import img6 from "../assets/hangman/6.jpg";
+import { Helmet } from "react-helmet-async";
+
 
 const images = [img0, img1, img2, img3, img4, img5, img6];
 const maxMistakes = 6;
@@ -66,7 +68,9 @@ const HangmanGame = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 px-4 py-6 relative">
-
+<Helmet>
+    <title>Vokabel Card | 2 Nomaden</title>
+  </Helmet>
       {/* Sol üst logo */}
       <Link
         to="/"
