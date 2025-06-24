@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import data from "../data/vokabeln2.json";
 
 type Vokabel = {
@@ -28,35 +29,29 @@ export default function MatchingGame() {
   // Süre sayacı
   useEffect(() => {
     let timer: number;
-
     if (isRunning) {
-      timer = setInterval(() => {
-        setSeconds((s) => s + 1);
-      }, 1000);
+      timer = setInterval(() => setSeconds((s) => s + 1), 1000);
     }
-
     return () => clearInterval(timer);
   }, [isRunning]);
 
-  // Oyun tamamlandığında süreyi durdur
+  // Oyun tamamlanınca süreyi durdur
   useEffect(() => {
     if (cards.length > 0 && cards.every((card) => card.matched)) {
       setIsRunning(false);
     }
   }, [cards]);
 
-  // Kartları karıştır
   const shuffleCards = (vokabeln: Vokabel[]): Card[] => {
-    const shuffledVokabeln = [...vokabeln].sort(() => Math.random() - 0.5).slice(0, 6); // sadece 6 kelime çifti
-  
-    const cardList: Card[] = [];
-  
-    shuffledVokabeln.forEach((item, index) => {
-      cardList.push({ id: `${index}-wort`, text: item.wort, matched: false });
-      cardList.push({ id: `${index}-bedeutung`, text: item.bedeutung, matched: false });
+    const selected = [...vokabeln].sort(() => Math.random() - 0.5).slice(0, 6);
+    const pairList: Card[] = [];
+
+    selected.forEach((item, index) => {
+      pairList.push({ id: `${index}-wort`, text: item.wort, matched: false });
+      pairList.push({ id: `${index}-bedeutung`, text: item.bedeutung, matched: false });
     });
-  
-    return cardList.sort(() => Math.random() - 0.5);
+
+    return pairList.sort(() => Math.random() - 0.5);
   };
 
   const handleClick = (card: Card) => {
@@ -76,7 +71,6 @@ export default function MatchingGame() {
     if (!card1 || !card2) return;
 
     const sameIndex = id1.split("-")[0] === id2.split("-")[0];
-
     if (sameIndex) {
       const updated = cards.map((card) =>
         card.id === card1.id || card.id === card2.id
@@ -93,32 +87,43 @@ export default function MatchingGame() {
   const allMatched = cards.length > 0 && cards.every((card) => card.matched);
 
   return (
-    <div className="max-w-3xl mx-auto p-8">
-      <h2 className="text-2xl font-bold text-center mb-4 text-blue-800">🎴 Matching Game</h2>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 px-4 py-6 relative">
 
-      <p className="text-center text-sm text-gray-600 mb-4">⏱ Süre: {seconds} saniye</p>
+      {/* Sol üst 2Goecebe logosu */}
+      <Link
+        to="/"
+        className="absolute top-4 left-4 text-indigo-600 font-bold text-xl hover:underline"
+      >
+        2Goecebe
+      </Link>
 
-      {allMatched ? (
-        <div className="text-center text-green-700 text-xl font-semibold">
-          🎉 Tebrikler! Tüm kartları {seconds} saniyede eşleştirdiniz!
-        </div>
-      ) : (
-        <div className="grid grid-cols-4 gap-4">
-          {cards.map((card) => (
-            <div
-              key={card.id}
-              onClick={() => handleClick(card)}
-              className={`cursor-pointer h-20 flex items-center justify-center border text-lg font-semibold rounded shadow transition duration-200 ${
-                flipped.includes(card.id) || card.matched
-                  ? "bg-green-100"
-                  : "bg-blue-200 hover:bg-blue-300"
-              }`}
-            >
-              {flipped.includes(card.id) || card.matched ? card.text : "❓"}
-            </div>
-          ))}
-        </div>
-      )}
+      <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-6 mt-16">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-blue-800">🎴 Matching Game</h2>
+
+        <p className="text-center text-sm text-gray-600 mb-4">⏱ Süre: {seconds} saniye</p>
+
+        {allMatched ? (
+          <div className="text-center text-green-700 text-xl font-semibold mt-6">
+            🎉 Tebrikler! Tüm kartları {seconds} saniyede eşleştirdiniz!
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {cards.map((card) => (
+              <div
+                key={card.id}
+                onClick={() => handleClick(card)}
+                className={`cursor-pointer h-20 sm:h-24 flex items-center justify-center border text-lg font-semibold rounded-xl shadow transition duration-200 ${
+                  flipped.includes(card.id) || card.matched
+                    ? "bg-green-100 text-gray-900"
+                    : "bg-blue-200 hover:bg-blue-300 text-blue-900"
+                }`}
+              >
+                {flipped.includes(card.id) || card.matched ? card.text : "❓"}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

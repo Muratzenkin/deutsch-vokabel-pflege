@@ -1,12 +1,13 @@
-import vokabelnData from "../data/vokabeln.json";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import vokabelnData from "../data/vokabeln.json";
 
 export default function VokabelCard() {
   const [index, setIndex] = useState(0);
   const [showBack, setShowBack] = useState(false);
 
   if (vokabelnData.length === 0) {
-    return <div>Vokabeln verisi bulunamadı.</div>;
+    return <div className="text-center mt-10">Vokabeln verisi bulunamadı.</div>;
   }
 
   const current = vokabelnData[index] || { wort: "", bedeutung: "", beispiel: "" };
@@ -32,38 +33,54 @@ export default function VokabelCard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 flex items-center justify-center px-4">
-      <div className="w-full max-w-lg bg-white shadow-2xl rounded-2xl p-8 text-center">
-  
-        <div className="text-4xl font-semibold text-gray-800 mb-4 min-h-[3rem] transition-all duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-100 px-4 py-6 relative">
+      
+      {/* Sol üst logo/link */}
+      <Link
+        to="/"
+        className="absolute top-4 left-4 text-indigo-600 font-bold text-xl hover:underline"
+      >
+PflegeVokabel
+</Link>
+
+      {/* Kart */}
+      <div className="max-w-xl mx-auto mt-12 bg-white rounded-3xl shadow-2xl p-8 text-center">
+        
+        {/* Kelime / Anlam */}
+        <div className="text-4xl font-bold text-gray-800 mb-4 min-h-[3rem] transition-all duration-300">
           {showBack ? current.bedeutung : current.wort}
         </div>
-  
+
+        {/* Kartı çevir */}
         <button
           onClick={() => setShowBack(!showBack)}
-          className="mb-4 px-6 py-2 bg-blue-500 hover:bg-blue-600 transition rounded-full text-white font-medium shadow"
+          className="mb-6 px-6 py-2 bg-indigo-500 hover:bg-indigo-600 transition rounded-full text-white font-medium shadow"
         >
           Karte {showBack ? "zurück" : "umdrehen"}
         </button>
-  
-        <p className="italic text-gray-600 mb-6">Beispiel: {current.beispiel}</p>
-  
-        <div className="flex justify-center gap-4">
+
+        {/* Örnek cümle */}
+        <p className="italic text-gray-600 mb-8">
+          Beispiel: {current.beispiel}
+        </p>
+
+        {/* Butonlar */}
+        <div className="flex flex-wrap justify-center gap-4">
           <button
             onClick={handleSpeak}
-            className="px-4 py-2 bg-green-500 hover:bg-green-600 rounded-full text-white shadow font-semibold"
+            className="px-5 py-2 bg-green-400 hover:bg-green-500 rounded-full text-white font-semibold shadow"
           >
             🔊 Anhören
           </button>
           <button
             onClick={handlePrevious}
-            className="px-4 py-2 bg-gray-400 hover:bg-gray-500 rounded-full text-white shadow font-semibold"
+            className="px-5 py-2 bg-gray-400 hover:bg-gray-500 rounded-full text-white font-semibold shadow"
           >
             ⬅️ Geri
           </button>
           <button
             onClick={handleNext}
-            className="px-4 py-2 bg-gray-700 hover:bg-gray-800 rounded-full text-white shadow font-semibold"
+            className="px-5 py-2 bg-blue-500 hover:bg-blue-600 rounded-full text-white font-semibold shadow"
           >
             ➡️ Nächste
           </button>
