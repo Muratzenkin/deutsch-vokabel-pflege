@@ -4,13 +4,13 @@ import VokabelCard from "./components/VokabelCard";
 import MatchingGame from "./components/MatchingGame";
 import AbkuerzungCard from "./components/AbkürzungCard";
 import LanguagePage from "./components/LanguagePage";
-import WelcomePage from "./components/WelcomePage"; // Yeni karşılama sayfası
+import WelcomePage from "./components/WelcomePage"; 
 
 export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<WelcomePage />} /> {/* Karşılama sayfası */}
+        <Route path="/" element={<WelcomePage />} /> 
         <Route path="/karten" element={<VokabelCard />} />
         <Route path="/hangman" element={<HangmanGame />} />
         <Route path="/matching" element={<MatchingGame />} />
