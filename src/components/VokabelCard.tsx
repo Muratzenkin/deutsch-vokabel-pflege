@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import vokabelnData from "../data/vokabeln.json";
-import { Helmet } from "react-helmet-async";
 
 
 export default function VokabelCard() {
@@ -36,9 +35,7 @@ export default function VokabelCard() {
 
   return (
     <>
-    <Helmet>
-    <title>Vokabel Card | 2 Nomaden</title>
-  </Helmet>
+   
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-100 px-4 py-6 relative">
       
       {/* Sol üst logo/link */}
