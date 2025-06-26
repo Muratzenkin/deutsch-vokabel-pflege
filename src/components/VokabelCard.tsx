@@ -79,7 +79,8 @@ export default function VokabelCard() {
           </p>
 
           {/* Butonlar */}
-          <div className="flex flex-wrap justify-center gap-4 ">
+          <div className="flex flex-col gap-4">
+            {/* Anhören Butonu */}
             <button
               onClick={handleSpeak}
               className="cursor-pointer px-5 py-2 bg-green-500 hover:bg-green-600 rounded-full text-white font-semibold shadow flex items-center justify-center gap-2"
@@ -87,20 +88,26 @@ export default function VokabelCard() {
               <FiVolume2 size={24} />
               Anhören
             </button>
-            <button
-              onClick={handlePrevious}
-              className="cursor-pointer px-5 py-2 bg-gray-500 hover:bg-gray-600 rounded-full text-white font-semibold shadow flex items-center justify-center gap-2"
-            >
-              <FiArrowLeft size={24} />
-              Vorherige
-            </button>
-            <button
-              onClick={handleNext}
-              className="cursor-pointer px-5 py-2 bg-blue-500 hover:bg-blue-600 rounded-full text-white font-semibold shadow flex items-center justify-center gap-2"
-            >
-              <FiArrowRight size={24} />
-              Nächste
-            </button>
+
+            {/* Vorherige ve Nächste Butonları */}
+            <div className="flex justify-center gap-4">
+              <button
+                onClick={handlePrevious}
+                className="cursor-pointer px-5 py-2 bg-gray-500 hover:bg-gray-600 rounded-full text-white font-semibold shadow flex items-center justify-center gap-2"
+              >
+                <FiArrowLeft size={24} />
+                Vorherige
+              </button>
+              <button
+                onClick={handleNext}
+                className="cursor-pointer px-5 py-2 bg-blue-500 hover:bg-blue-600 rounded-full text-white font-semibold shadow flex items-center justify-center gap-2"
+              >
+                <FiArrowRight size={24} />
+                Nächste
+              </button>
+            </div>
+
+            {/* Gelernt Butonu */}
             <button
               onClick={handleMarkAsKnown}
               className="cursor-pointer px-5 py-2 bg-yellow-500 hover:bg-yellow-600 rounded-full text-white font-semibold shadow flex items-center justify-center gap-2"
@@ -108,15 +115,15 @@ export default function VokabelCard() {
               <FiCheck size={24} />
               Gelernt
             </button>
-          </div>
 
-          {/* Reset Butonu */}
-          <button
-            onClick={handleResetKnownWords}
-            className="cursor-pointer mt-6 px-6 py-2 bg-red-500 hover:bg-red-600 rounded-full text-white font-semibold shadow flex items-center justify-center gap-2 mx-auto"
-          >
-            Reset
-          </button>
+            {/* Reset Butonu */}
+            <button
+              onClick={handleResetKnownWords}
+              className="cursor-pointer px-6 py-2 bg-red-500 hover:bg-red-600 rounded-full text-white font-semibold shadow flex items-center justify-center gap-2 mx-auto"
+            >
+              Reset
+            </button>
+          </div>
         </div>
       </div>
     </>

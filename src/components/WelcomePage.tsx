@@ -1,4 +1,5 @@
 import NavLinks from "./NavLinks";
+import { FiMail } from "react-icons/fi";
 
 export default function WelcomePage() {
   return (
@@ -14,9 +15,10 @@ export default function WelcomePage() {
           <NavLinks />
         </div>
 
-
         {/* Footer */}
-        <p className="text-center text-xs text-gray-500 mt-6">2 Goecebe</p>
+        <p className="text-center text-xs text-gray-500 mt-6 flex items-center justify-center gap-2">
+          <FiMail /> 2goecebe.gmail.com
+        </p>
       </div>
     </div>
   );
