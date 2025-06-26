@@ -20,13 +20,11 @@ export default function MatchingGame() {
   const [seconds, setSeconds] = useState(0);
   const [isRunning, setIsRunning] = useState(true);
 
-  // Kartları yükle ve karıştır
   useEffect(() => {
     const shuffled = shuffleCards(data as Vokabel[]);
     setCards(shuffled);
   }, []);
 
-  // Süre sayacı
   useEffect(() => {
     let timer: number;
     if (isRunning) {
@@ -35,7 +33,6 @@ export default function MatchingGame() {
     return () => clearInterval(timer);
   }, [isRunning]);
 
-  // Oyun tamamlanınca süreyi durdur
   useEffect(() => {
     if (cards.length > 0 && cards.every((card) => card.matched)) {
       setIsRunning(false);
@@ -87,24 +84,23 @@ export default function MatchingGame() {
   const allMatched = cards.length > 0 && cards.every((card) => card.matched);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 px-4 py-6 relative">
-
-      {/* Sol üst 2Goecebe logosu */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-700 px-4 py-6 relative flex items-center justify-center">
+      {/* Sol üst logo/link */}
       <Link
         to="/"
-        className="absolute top-4 left-4 text-indigo-600 font-bold text-xl hover:underline"
+        className="absolute top-4 left-4 text-gray-300 font-bold text-xl hover:underline cursor-pointer"
       >
-        2Goecebe
+        PflegeVokabel
       </Link>
 
-      <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl p-6 mt-16">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-blue-800">🎴 Matching Game</h2>
+      <div className="max-w-4xl w-full bg-white rounded-3xl shadow-2xl p-8 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-4 text-blue-800">Zuordnungsspiel</h2>
 
-        <p className="text-center text-sm text-gray-600 mb-4">⏱ Süre: {seconds} saniye</p>
+        <p className="text-center text-sm text-gray-600 mb-4">Zeit: {seconds} Sekunden</p>
 
         {allMatched ? (
           <div className="text-center text-green-700 text-xl font-semibold mt-6">
-            🎉 Tebrikler! Tüm kartları {seconds} saniyede eşleştirdiniz!
+            Herzlichen Glückwunsch! Sie haben alle Karten in {seconds} Sekunden zugeordnet!
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">

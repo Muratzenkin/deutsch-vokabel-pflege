@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 export default function NavLinks() {
   const links = [
-    { to: "/karten", label: "🧠 Vokabelkarten" },
-    { to: "/hangman", label: "🎯 Hangman" },
-    { to: "/matching", label: "🎴 Zuordnungsspiel" },
-    { to: "/abkuerzung", label: "📋 Abkürzungen" },
-    { to: "/language", label: "🌐 Spracheinstellungen" },
+    { to: "/karten", label: "Vokabelkarten" },
+    { to: "/hangman", label: "Hangman" },
+    { to: "/matching", label: "Zuordnungsspiel" },
+    { to: "/abkuerzung", label: "Abkürzungen" },
+    { to: "/language", label: " Pflegemagazin	" },
   ];
 
   // Her buton için ayrı pastel renk (Tailwind sınıfları)

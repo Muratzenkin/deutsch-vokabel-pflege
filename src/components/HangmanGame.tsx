@@ -9,7 +9,6 @@ import img4 from "../assets/hangman/4.jpg";
 import img5 from "../assets/hangman/5.jpg";
 import img6 from "../assets/hangman/6.jpg";
 
-
 const images = [img0, img1, img2, img3, img4, img5, img6];
 const maxMistakes = 6;
 
@@ -34,6 +33,7 @@ const HangmanGame = () => {
 
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const [mistakes, setMistakes] = useState(0);
+  const [guess, setGuess] = useState(""); 
 
   const handleGuess = (letter: string) => {
     if (guessedLetters.includes(letter)) return;
@@ -41,6 +41,17 @@ const HangmanGame = () => {
     if (!word.includes(letter)) {
       setMistakes((m) => m + 1);
     }
+  };
+
+  const handleWordGuess = () => {
+    if (guess.toLowerCase() === word.toLowerCase()) {
+      alert("Herzlichen Glückwunsch! Sie haben das Wort erraten!");
+      setGuessedLetters(word.split(""));
+    } else {
+      alert("Falsche Vermutung!");
+      setMistakes((m) => m + 1);
+    }
+    setGuess(""); 
   };
 
   const displayWord = word
@@ -59,25 +70,25 @@ const HangmanGame = () => {
       setGuessedLetters([]);
       setMistakes(0);
     } else {
-      alert("Tüm kelimeleri bitirdin! Tebrikler 🎉");
+      alert("Alle Wörter wurden gespielt! Herzlichen Glückwunsch ");
     }
   };
 
   const ALPHABET = "abcdefghijklmnopqrstuvwxyzäöüß".split("");
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 px-4 py-6 relative">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-700 px-4 py-6 relative flex items-center justify-center">
       {/* Sol üst logo */}
       <Link
         to="/"
-        className="absolute top-4 left-4 text-indigo-600 font-bold text-xl hover:underline"
+        className="absolute top-4 left-4 text-gray-300 font-bold text-xl hover:underline cursor-pointer"
       >
-        2Goecebe
+        PflegeVokabel
       </Link>
 
       {/* Ana kutu */}
-      <div className="max-w-xl mx-auto mt-16 bg-white rounded-3xl shadow-2xl p-6 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-700">🎯 Hangman (Adam Asmaca)</h2>
+      <div className="max-w-xl w-full bg-white rounded-3xl shadow-2xl p-8 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-blue-700">Hangman (Galgenmännchen)</h2>
 
         <img src={images[mistakes]} alt="Hangman" className="w-40 mx-auto mb-4" />
 
@@ -91,22 +102,39 @@ const HangmanGame = () => {
               key={letter}
               onClick={() => handleGuess(letter)}
               disabled={guessedLetters.includes(letter) || isWinner || isGameOver}
-              className="w-9 h-9 text-white rounded-full bg-blue-500 hover:bg-blue-600 disabled:opacity-30 transition"
+              className="w-9 h-9 text-white rounded-full bg-blue-500 hover:bg-blue-600 disabled:opacity-30 transition cursor-pointer"
             >
               {letter}
             </button>
           ))}
         </div>
 
+        {/* Kelime tahmin etme */}
+        <div className="mt-4">
+          <input
+            type="text"
+            value={guess}
+            onChange={(e) => setGuess(e.target.value)}
+            placeholder="Wort raten..."
+            className="px-4 py-2 border rounded-lg shadow w-full mb-2"
+          />
+          <button
+            onClick={handleWordGuess}
+            className="px-5 py-2 bg-green-500 hover:bg-green-600 text-white rounded-full shadow transition cursor-pointer"
+          >
+            Wort raten
+          </button>
+        </div>
+
         {(isWinner || isGameOver) && (
           <div className="mt-4">
-            {isWinner && <p className="text-green-600 text-xl font-bold">✅ Bravo! Doğru bildin!</p>}
-            {isGameOver && <p className="text-red-600 text-xl font-bold">❌ Kaybettin! Kelime: <span className="underline">{word}</span></p>}
+            {isWinner && <p className="text-green-600 text-xl font-bold">Herzlichen Glückwunsch! Sie haben das Wort erraten!</p>}
+            {isGameOver && <p className="text-red-600 text-xl font-bold">Sie haben verloren! Das Wort war: <span className="underline">{word}</span></p>}
             <button
               onClick={resetGame}
-              className="mt-3 px-5 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full shadow transition"
+              className="mt-3 px-5 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full shadow transition cursor-pointer"
             >
-              🔄 Yeni Oyun
+              Neues Spiel
             </button>
           </div>
         )}
