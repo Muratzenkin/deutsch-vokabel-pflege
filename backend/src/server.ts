@@ -17,7 +17,7 @@ app.use(cors({
   credentials: true, // Çerezleri dahil etmek için
 }));
 
-app.options("*", cors()); 
+app.options("/*", cors()); 
 
 app.use(express.json());
 
