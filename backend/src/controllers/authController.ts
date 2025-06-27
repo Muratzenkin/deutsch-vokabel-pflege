@@ -7,6 +7,13 @@ export const register = async (req: Request, res: Response): Promise<void> => {
   try {
     const { username, email, password } = req.body;
 
+    // Email ve kullanıcı adı benzersiz mi kontrol et
+    const existingUser = await User.findOne({ $or: [{ email }, { username }] });
+    if (existingUser) {
+      res.status(400).json({ error: "Email veya kullanıcı adı zaten kullanılıyor." });
+      return;
+    }
+
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = new User({ username, email, password: hashedPassword });
 
@@ -34,6 +41,7 @@ export const login = async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
+    // Token süresini artırabilirsiniz (örneğin: "7d" -> 7 gün)
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET!, { expiresIn: "1h" });
     res.status(200).json({ token });
   } catch (error) {
