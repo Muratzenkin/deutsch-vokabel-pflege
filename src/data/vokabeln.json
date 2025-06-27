@@ -1,63 +1,132 @@
 [
-    {
-      "wort": "die Notfallversorgung",
-      "bedeutung": "acil bakım hizmeti",
-      "beispiel": "Die Notfallversorgung erfordert schnelles und koordiniertes Handeln."
-    },
-    {
-      "wort": "das Mobilitätshilfsmittel",
-      "bedeutung": "hareket desteği aracı (örn. tekerlekli sandalye)",
-      "beispiel": "Der Rollstuhl zählt zu den wichtigsten Mobilitätshilfsmitteln im Pflegealltag."
-    },
-    {
-      "wort": "der proximale Humerus",
-      "bedeutung": "üst kolun üst kısmı (tıbbi adı)",
-      "beispiel": "Die Fraktur befindet sich im Bereich des proximalen Humerus."
-    },
-    {
-      "wort": "das Schultergelenk",
-      "bedeutung": "omuz eklemi",
-      "beispiel": "Entzündungen im Schultergelenk schränken die Beweglichkeit stark ein."
-    },
-    {
-      "wort": "das Os sacrum",
-      "bedeutung": "kuyruk sokumu (Latince adı)",
-      "beispiel": "Der Dekubitus Grad II befindet sich am Os sacrum."
-    },
-    {
-      "wort": "die Dyspnoe",
-      "bedeutung": "nefes darlığı (tıbbi terim)",
-      "beispiel": "Die Patientin zeigte akute Dyspnoe bei Belastung."
-    },
-    {
-      "wort": "die Wundversorgung",
-      "bedeutung": "yara bakımı",
-      "beispiel": "Die Wundversorgung muss unter sterilen Bedingungen erfolgen."
-    },
-    {
-      "wort": "die arterielle Blutdruckmessung",
-      "bedeutung": "kan basıncının arteriyel yolla ölçülmesi",
-      "beispiel": "Die arterielle Blutdruckmessung erfolgt im Sitzen und nach Ruhephase."
-    },
-    {
-      "wort": "die Anorexie",
-      "bedeutung": "aşırı iştah kaybı (tıbbi terim)",
-      "beispiel": "Die Patientin leidet unter Anorexie infolge der Chemotherapie."
-    },
-    {
-      "wort": "das Drainagesystem",
-      "bedeutung": "vücut sıvısını dışarı taşıyan sistem",
-      "beispiel": "Das Drainagesystem wird postoperativ zur Ableitung von Wundsekret eingesetzt."
-    },
-    {
-      "wort": "die ärztliche Verordnung",
-      "bedeutung": "doktorun yazılı talimatı",
-      "beispiel": "Bitte dokumentieren Sie die Umsetzung der ärztlichen Verordnung im Pflegebericht."
-    },
-    {
-      "wort": "die Ganzkörperpflege",
-      "bedeutung": "tam vücut temizliği",
-      "beispiel": "Die Ganzkörperpflege sollte unter Berücksichtigung der Ressourcen des Patienten erfolgen."
-    }
-  ]
-  
+  {
+    "wort": "anziehen",
+    "bedeutung": "giyinmek",
+    "beispiel": "Der Patient soll morgens selbstständig sein Hemd anziehen."
+  },
+  {
+    "wort": "ausziehen",
+    "bedeutung": "soyunmak",
+    "beispiel": "Bitte helfen Sie dem Bewohner beim Ausziehen der Jacke."
+  },
+  {
+    "wort": "hochziehen",
+    "bedeutung": "yukarı çekmek",
+    "beispiel": "Ziehen Sie die Bettdecke bis zur Brust hoch."
+  },
+  {
+    "wort": "runterlassen",
+    "bedeutung": "aşağı indirmek",
+    "beispiel": "Lassen Sie den Rollostoff vorsichtig runter."
+  },
+  {
+    "wort": "öffnen",
+    "bedeutung": "açmak",
+    "beispiel": "Bitte öffnen Sie das Fenster für frische Luft."
+  },
+  {
+    "wort": "schliessen",
+    "bedeutung": "kapatmak",
+    "beispiel": "Schließen Sie die Tür nach dem Verlassen des Zimmers."
+  },
+  {
+    "wort": "aufmachen",
+    "bedeutung": "açmak",
+    "beispiel": "Machen Sie vorsichtig den Verband auf."
+  },
+  {
+    "wort": "zumachen",
+    "bedeutung": "kapatmak",
+    "beispiel": "Bitte machen Sie den Reißverschluss zu."
+  },
+  {
+    "wort": "ablegen",
+    "bedeutung": "bırakmak, çıkarmak",
+    "beispiel": "Der Mantel kann hier abgelegt werden."
+  },
+  {
+    "wort": "aufsetzen",
+    "bedeutung": "takmak (şapka, maske)",
+    "beispiel": "Bitte setzen Sie Ihre Maske auf."
+  },
+  {
+    "wort": "ausstrecken",
+    "bedeutung": "uzatmak",
+    "beispiel": "Strecken Sie bitte den Arm aus."
+  },
+  {
+    "wort": "strecken",
+    "bedeutung": "germek, uzatmak",
+    "beispiel": "Der Patient soll das Bein nach der OP strecken."
+  },
+  {
+    "wort": "aufstehen",
+    "bedeutung": "ayağa kalkmak",
+    "beispiel": "Können Sie ohne Hilfe aufstehen?"
+  },
+  {
+    "wort": "hinsetzen",
+    "bedeutung": "oturmak",
+    "beispiel": "Bitte setzen Sie sich hierhin."
+  },
+  {
+    "wort": "hinlegen",
+    "bedeutung": "yatmak",
+    "beispiel": "Der Patient möchte sich kurz hinlegen."
+  },
+  {
+    "wort": "aufrichten",
+    "bedeutung": "doğrulmak",
+    "beispiel": "Helfen Sie dem Bewohner, sich im Bett aufzurichten."
+  },
+  {
+    "wort": "beugen",
+    "bedeutung": "eğmek",
+    "beispiel": "Beugen Sie den Oberkörper langsam nach vorne."
+  },
+  {
+    "wort": "bücken",
+    "bedeutung": "eğilmek",
+    "beispiel": "Bitte bücken Sie sich nicht zu tief nach der OP."
+  },
+  {
+    "wort": "nicken",
+    "bedeutung": "başını sallamak (evet anlamında)",
+    "beispiel": "Der Patient nickt zur Zustimmung."
+  },
+  {
+    "wort": "schütteln",
+    "bedeutung": "sallamak",
+    "beispiel": "Er schüttelt den Kopf als Zeichen der Ablehnung."
+  },
+  {
+    "wort": "überziehen",
+    "bedeutung": "üstüne giymek",
+    "beispiel": "Bitte überziehen Sie die Schutzkleidung vor dem Betreten."
+  },
+  {
+    "wort": "abnehmen",
+    "bedeutung": "çıkarmak, almak",
+    "beispiel": "Bitte nehmen Sie die Brille ab, bevor Sie schlafen gehen."
+  },
+  {
+    "wort": "anheben",
+    "bedeutung": "kaldırmak",
+    "beispiel": "Heben Sie das Bein vorsichtig an."
+  },
+  {
+    "wort": "abstützen",
+    "bedeutung": "desteklemek",
+    "beispiel": "Stützen Sie sich beim Aufstehen am Tisch ab."
+  },
+  {
+    "wort": "halten",
+    "bedeutung": "tutmak",
+    "beispiel": "Halten Sie den Arm ruhig während der Untersuchung."
+  },
+  {
+    "wort": "drücken",
+    "bedeutung": "basmak, sıkmak",
+    "beispiel": "Drücken Sie die Taste, um den Alarm auszulösen."
+  }
+]
