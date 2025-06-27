@@ -9,9 +9,12 @@ connectDB();
 
 const app = express();
 
+// CORS ayarları
 app.use(cors({
-  origin: "https://pflege-vokabel.netlify.app",
-  credentials: true,
+  origin: "https://pflege-vokabel.netlify.app", // Frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // İzin verilen HTTP metodları
+  allowedHeaders: ["Content-Type", "Authorization"], // İzin verilen başlıklar
+  credentials: true, // Çerezleri dahil etmek için
 }));
 
 app.options("*", cors()); 
