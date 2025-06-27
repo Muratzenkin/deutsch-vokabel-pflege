@@ -5,6 +5,7 @@ import MatchingGame from "./components/MatchingGame";
 import AbkuerzungCard from "./components/AbkürzungCard";
 import LanguagePage from "./components/LanguagePage";
 import WelcomePage from "./components/WelcomePage"; 
+import NotFound from "./components/NotFound";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/matching" element={<MatchingGame />} />
         <Route path="/abkuerzung" element={<AbkuerzungCard />} />
         <Route path="/language" element={<LanguagePage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
