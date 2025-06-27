@@ -7,9 +7,9 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./src", // rootDir src klasörünü işaret ediyor
-    "typeRoots": ["./types", "./node_modules/@types"] // types klasörünü ekleyin
+    "rootDir": "./src",
+    "typeRoots": ["./types", "./node_modules/@types"]
   },
-  "include": ["src/**/*"], // src klasöründeki tüm dosyaları dahil et
-  "exclude": ["node_modules", "dist", "**/*.spec.ts"] // dist ve test dosyalarını hariç tut
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
 }
