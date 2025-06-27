@@ -33,7 +33,7 @@ const AuthPage: React.FC<AuthPageProps> = ({ setIsAuthenticated }) => {
     e.preventDefault();
     try {
       if (isLogin) {
-        const res = await axios.post("http://localhost:3001/api/auth/login", {
+        const res = await axios.post("https://sprachkurs-api.onrender.com/api/auth/login", {
           username,
           password,
         });
@@ -46,7 +46,7 @@ const AuthPage: React.FC<AuthPageProps> = ({ setIsAuthenticated }) => {
         setIsAuthenticated(true);
         navigate("/welcome");
       } else {
-        const res = await axios.post("http://localhost:3001/api/auth/register", {
+        const res = await axios.post("https://sprachkurs-api.onrender.com/api/auth/register", {
           username,
           email,
           password,
