@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./src", // rootDir src klasörünü işaret ediyor
+    "typeRoots": ["./types", "./node_modules/@types"] // types klasörünü ekleyin
+  },
+  "include": ["src/**/*"], // src klasöründeki tüm dosyaları dahil et
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"] // dist ve test dosyalarını hariç tut
+}
