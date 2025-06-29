@@ -16,7 +16,7 @@ interface AuthPageProps {
 const AuthPage: React.FC<AuthPageProps> = ({ setIsAuthenticated }) => {
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState("");
-  const [email, setEmail] = useState(""); // sadece register için kullanılır
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
@@ -33,10 +33,16 @@ const AuthPage: React.FC<AuthPageProps> = ({ setIsAuthenticated }) => {
     e.preventDefault();
     try {
       if (isLogin) {
-        const res = await axios.post("https://sprachkurs-api.onrender.com/api/auth/login", {
-          username,
-          password,
-        });
+        const res = await axios.post(
+          "https://sprachkurs-api.onrender.com/api/auth/login",
+          {
+            username,
+            password,
+          },
+          {
+            withCredentials: true, // Çerezleri dahil etmek için
+          }
+        );
         const token = res.data.token;
         if (rememberMe) {
           localStorage.setItem("token", token);
@@ -46,11 +52,17 @@ const AuthPage: React.FC<AuthPageProps> = ({ setIsAuthenticated }) => {
         setIsAuthenticated(true);
         navigate("/welcome");
       } else {
-        const res = await axios.post("https://sprachkurs-api.onrender.com/api/auth/register", {
-          username,
-          email,
-          password,
-        });
+        const res = await axios.post(
+          "https://sprachkurs-api.onrender.com/api/auth/register",
+          {
+            username,
+            email,
+            password,
+          },
+          {
+            withCredentials: true, // Çerezleri dahil etmek için
+          }
+        );
         alert(res.data.message);
         setIsLogin(true);
       }

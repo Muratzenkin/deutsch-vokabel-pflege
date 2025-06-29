@@ -11,13 +11,12 @@ const app = express();
 
 // CORS ayarları
 app.use(cors({
-  origin: "https://pflege-vokabel.netlify.app", // Frontend URL
+  origin: ["https://pflege-vokabel.netlify.app", "http://localhost:5173"], // Frontend URL
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // İzin verilen HTTP metodları
   allowedHeaders: ["Content-Type", "Authorization"], // İzin verilen başlıklar
   credentials: true, // Çerezleri dahil etmek için
 }));
-
-app.options("/*", cors()); 
+app.options("*", cors());
 
 app.use(express.json());
 
